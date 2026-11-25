@@ -477,6 +477,7 @@ class CipherForgeApp(ctk.CTk):
             dropdown_text_color=theme.text_primary,
             dropdown_hover_color=theme.sidebar_btn_hover,
         )
+        self.theme_selector.set(theme.id)
 
         # Update sidebar buttons
         current_id = self.current_cipher.id if self.current_cipher else None
@@ -567,8 +568,11 @@ class CipherForgeApp(ctk.CTk):
             hover_color=theme.btn_utility_hover,
             text_color=theme.btn_utility_text,
         )
+        out_content = self.txt_output.get("1.0", "end-1c")
+        is_err = out_content.startswith("Encryption Error:") or out_content.startswith("Decryption Error:")
         self.txt_output.configure(
             fg_color=theme.input_bg,
+            text_color="#ef4444" if is_err else theme.input_text,
             border_color=theme.input_border,
         )
 

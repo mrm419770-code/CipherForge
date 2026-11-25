@@ -159,7 +159,6 @@ class RSACipher(BaseCipher):
             raise ValueError(
                 "Key cannot be empty. Please enter 'exponent, modulus' (e.g., '65537, 3233')."
             )
-
         raw_parts = cleaned.replace(",", " ").split()
         parts = [p for p in raw_parts if p]
         if len(parts) != 2:
@@ -167,17 +166,15 @@ class RSACipher(BaseCipher):
                 f"RSA key requires two integers (exponent, modulus). Received: '{key}'. "
                 "Format: 'e, n' or 'd, n'."
             )
-
         try:
             exp = int(parts[0])
             mod = int(parts[1])
         except ValueError:
             raise ValueError(f"RSA key components must be valid integers: '{key}'.")
-
         if mod < 2:
             raise ValueError(f"RSA modulus n must be greater than 1 (got {mod}).")
-
         return exp, mod
+
 
     def encrypt(self, text: str, key: str) -> str:
         e, n = self._parse_key_pair(key)
@@ -194,7 +191,6 @@ class RSACipher(BaseCipher):
                 )
             c = power_mod(m, e, n)
             cipher_nums.append(str(c))
-
         return " ".join(cipher_nums)
 
     def decrypt(self, text: str, key: str) -> str:

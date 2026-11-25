@@ -1,7 +1,11 @@
 """
 Themes Module for CipherForge
-Defines cohesive, accessible color palettes for Dark, Light, and Red-Orange-Blue
-(Sunset Blaze / Cyber Flame) visual modes.
+Defines cohesive, accessible color palettes for:
+1. Dark Mode (Sleek Modern Slate)
+2. Light Mode (Crisp Accessible Light)
+3. Red-Orange-Blue Mode (Sunset Blaze / Cyber Flame)
+4. Nordic Obsidian (Sleek Dark Minimalist)
+5. Royal Champagne (Warm Luxury Light)
 """
 
 from dataclasses import dataclass
@@ -204,11 +208,99 @@ RED_ORANGE_BLUE_THEME = ThemePalette(
     badge_text="#071329",         # Deep navy text on orange
 )
 
+# 4. Nordic Obsidian (Sleek Dark Minimalist)
+NORDIC_OBSIDIAN_THEME = ThemePalette(
+    id="Nordic Obsidian",
+    name="Nordic Obsidian",
+    appearance_mode="Dark",
+    window_bg="#0d1117",          # Deepest obsidian charcoal
+    sidebar_bg="#161b22",         # Nordic dark slate
+    card_bg="#1c2128",            # Obsidian card surface
+    card_border="#30363d",        # Crisp cool slate border
+    scroll_bg="#13171f",          # Deep scroll canvas
+    text_primary="#f0f6fc",       # Soft off-white / ice text
+    text_secondary="#8b949e",     # Cool slate secondary
+    text_muted="#6e7681",         # Muted steel
+    btn_encrypt_bg="#0d9488",     # Muted cyan-teal primary action
+    btn_encrypt_hover="#115e59",  # Deep teal hover
+    btn_encrypt_text="#ffffff",
+    btn_decrypt_bg="#0284c7",     # Calm arctic cerulean secondary action
+    btn_decrypt_hover="#0369a1",  # Deep cerulean hover
+    btn_decrypt_text="#ffffff",
+    btn_rsa_bg="#0891b2",         # Subtle cyan-slate highlight
+    btn_rsa_hover="#0e7490",      # Deep cyan hover
+    btn_rsa_text="#ffffff",
+    btn_utility_bg="#21262d",     # Subtle steel utility
+    btn_utility_hover="#30363d",  # Steel hover
+    btn_utility_text="#f0f6fc",
+    btn_neutral_bg="#21262d",     # Steel neutral
+    btn_neutral_hover="#30363d",  # Neutral hover
+    btn_neutral_text="#8b949e",
+    sidebar_btn_active_bg="#0d9488",    # Teal active highlight
+    sidebar_btn_active_text="#ffffff",
+    sidebar_btn_inactive_text="#c9d1d9", # Ice slate text
+    sidebar_btn_hover="#21262d",
+    input_bg="#0d1117",           # Obsidian input surface
+    input_text="#f0f6fc",
+    input_border="#30363d",
+    tab_bg="#1c2128",
+    tab_btn_selected="#0d9488",   # Teal tab selector
+    tab_btn_hover="#115e59",
+    tab_text="#f0f6fc",
+    badge_bg="#134e4a",           # Dark cyan-teal badge
+    badge_text="#5eead4",         # Crisp light teal text
+)
+
+# 5. Royal Champagne (Warm Luxury Light)
+ROYAL_CHAMPAGNE_THEME = ThemePalette(
+    id="Royal Champagne",
+    name="Royal Champagne",
+    appearance_mode="Light",
+    window_bg="#fbf8f3",          # Warm ivory / alabaster background
+    sidebar_bg="#f4eee3",         # Soft warm champagne sidebar
+    card_bg="#ffffff",            # Crisp alabaster card surface
+    card_border="#dfd5c4",        # Refined sand/champagne hairline border
+    scroll_bg="#ede3d2",          # Warm sand scroll canvas
+    text_primary="#1e1b18",       # Deep espresso ink for ultra-crisp readability
+    text_secondary="#685d53",     # Warm walnut / bronze secondary text
+    text_muted="#8c7e72",         # Soft warm bronze muted
+    btn_encrypt_bg="#0f5132",     # Rich imperial emerald primary action
+    btn_encrypt_hover="#0a3622",  # Deep emerald hover
+    btn_encrypt_text="#ffffff",
+    btn_decrypt_bg="#9c6615",     # Rich warm bronze secondary action
+    btn_decrypt_hover="#7a4f0e",  # Deep bronze hover
+    btn_decrypt_text="#ffffff",
+    btn_rsa_bg="#1a365d",         # Deep regal navy accent
+    btn_rsa_hover="#10243e",      # Midnight navy hover
+    btn_rsa_text="#ffffff",
+    btn_utility_bg="#ede4d4",     # Soft champagne utility
+    btn_utility_hover="#dfd5c3",  # Champagne hover
+    btn_utility_text="#1e1b18",
+    btn_neutral_bg="#ede4d4",     # Soft champagne neutral
+    btn_neutral_hover="#dfd5c3",  # Neutral hover
+    btn_neutral_text="#4a4036",
+    sidebar_btn_active_bg="#0f5132",    # Rich imperial emerald active marker
+    sidebar_btn_active_text="#ffffff",
+    sidebar_btn_inactive_text="#3d352e", # Deep walnut inactive text
+    sidebar_btn_hover="#e5dac8",
+    input_bg="#ffffff",           # Pure ivory white input surface
+    input_text="#1a1613",         # Deep espresso ink
+    input_border="#cfc3af",       # Fine champagne border
+    tab_bg="#ffffff",
+    tab_btn_selected="#0f5132",   # Emerald selected tab
+    tab_btn_hover="#0a3622",
+    tab_text="#1e1b18",
+    badge_bg="#e8decb",           # Warm champagne badge
+    badge_text="#0f5132",         # Rich emerald text on champagne badge
+)
+
 # Registry of available themes
 THEME_MAP: Dict[str, ThemePalette] = {
     DARK_THEME.id: DARK_THEME,
     LIGHT_THEME.id: LIGHT_THEME,
     RED_ORANGE_BLUE_THEME.id: RED_ORANGE_BLUE_THEME,
+    NORDIC_OBSIDIAN_THEME.id: NORDIC_OBSIDIAN_THEME,
+    ROYAL_CHAMPAGNE_THEME.id: ROYAL_CHAMPAGNE_THEME,
 }
 
 THEME_NAMES: List[str] = list(THEME_MAP.keys())

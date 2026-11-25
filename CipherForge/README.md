@@ -20,10 +20,12 @@ rsa
 A clean, modular English Python desktop GUI application for classical and modern cryptography built using `customtkinter`. All 13 ciphers, modular arithmetic algorithms, matrix operations, and prime generation routines are implemented **completely from first principles** without external cryptographic libraries.
 
 ## 🎨 Theme Engine & Visual Modes
-CipherForge features a modular, runtime theme engine defined in [`themes.py`](themes.py):
+CipherForge features a modular, runtime theme engine defined in [`themes.py`](themes.py) supporting 5 distinct themes:
 - **Dark Mode**: Modern slate-dark palette with blue accents and high-contrast typography.
 - **Light Mode**: Crisp, clean light palette with subtle borders and clear readability.
 - **Red-Orange-Blue Mode (Sunset Blaze / Cyber Flame)**: Cohesive harmony blending **Deep/Sapphire Blue** backgrounds and containers, **Vibrant Sunset Orange** highlights and secondary actions, and **Radiant Crimson Red** primary actions and active highlights.
+- **Nordic Obsidian**: Sleek dark minimalist aesthetic with deep obsidian charcoal surfaces, cool slate borders, soft ice text, muted cyan-teal primary actions, and subtle steel accents.
+- **Royal Champagne**: Warm luxury light aesthetic featuring warm ivory/alabaster backgrounds, champagne card surfaces, deep espresso ink typography, rich imperial emerald primary actions, and warm bronze accents.
 
 ## 🚀 Key Features
 - **13 Cryptographic Algorithms**:
